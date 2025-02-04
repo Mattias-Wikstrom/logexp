@@ -58,7 +58,7 @@
 
                 // Use the inverse of the complex exponential function                
                 float x1 = log(sqrt(x0 * x0 + y0 * y0));
-                float y1 = atan2(x0, y0);
+                float y1 = atan2(x0, y0) * 1.908;
 
                 // Scale back to [0, 1] for sampling
                 float x2 = 0.5 + (x1 / 2.0 - u_offsetX);
@@ -80,7 +80,7 @@
 
             // Use the inverse of the complex exponential function
             var x1 = Math.log(Math.sqrt(x0 * x0 + y0 * y0));
-            var y1 = Math.atan2(x0, y0);
+            var y1 = Math.atan2(x0, y0) * 1.908;
 
             var x2 = 0.5 + (x1 / 2.0);
             var y2 = 0.5 + (y1 / 2.0);
@@ -189,6 +189,9 @@
 
         img.style.backgroundImage = `url('${initialBitmap}')`;
         img.style.backgroundSize = 'contain';
+
+        // img.style.backgroundSize = '250px 250px';
+        // img.style.backgroundRepeat = 'repeat';
 
         input.addEventListener('change', (event) => {
             const file = event.target.files[0]; // Get the selected file
