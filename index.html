@@ -57,7 +57,7 @@
                 float y0 = (v_texCoord.y - 0.5) * 2.0;
 
                 // Use the inverse of the complex exponential function                
-                float x1 = log(sqrt(x0 * x0 + y0 * y0));
+                float x1 = log(sqrt(x0 * x0 + y0 * y0)) * 1.908;
                 float y1 = atan2(x0, y0) * 1.908;
 
                 // Scale back to [0, 1] for sampling
@@ -79,7 +79,7 @@
             var y0 = (y - 0.5) * 2.0;
 
             // Use the inverse of the complex exponential function
-            var x1 = Math.log(Math.sqrt(x0 * x0 + y0 * y0));
+            var x1 = Math.log(Math.sqrt(x0 * x0 + y0 * y0)) * 1.908;
             var y1 = Math.atan2(x0, y0) * 1.908;
 
             var x2 = 0.5 + (x1 / 2.0);
